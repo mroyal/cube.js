@@ -7,7 +7,7 @@ menuOrder: 12
 ---
 [comment]: # (DOCUMENT IS PROOFREADED, MAKE CHANGES WITH CONFIDENCE)
 
-This tutorial walks through how to transform raw event data into sessions. Many “out-of-box” web analytics solutions come already prepackaged with sessions, but they work as a “black box.” It doesn’t give the user either insight into or control how these sessions defined and work.
+This tutorial walks through how to transform raw event data into sessions. Many “out-of-box” web analytics solutions come already prepackaged with sessions, but they work as a “black box.” It doesn’t give the user either insight into or control how these sessions are defined and work.
 
 With Cube.js SQL-based sessions schema, you’ll have full control over how these metrics are defined. It will give you great flexibility when designing sessions and events to your unique business use case.
 
@@ -176,7 +176,7 @@ measures: {
 ## Connecting Events to Sessions
 
 The next step is to identify the events contained within the session and the events ending the session. It’s required to get metrics such as session duration and events per session, or to identify sessions where specific events occurred (we’re going to use that for funnel analysis later on).
-We’re going to [declare join](/joins), that Events `belongsTo` Sessions and a specify condition, such as all users' events from session start (inclusive) till the start of the next session (exclusive) belong to that session.
+We’re going to [declare a join](/joins), that Events `belongsTo` Sessions and specify a condition, such as all users' events from session start (inclusive) till the start of the next session (exclusive) belong to that session.
 
 ```javascript
 // Add the joins block to the Events cube
